@@ -331,6 +331,11 @@ iframe{
         left:30%;
         width: 80%;
     }
+    .freyja_logo {
+        display: block;
+        margin: auto;
+        position: absolute;
+      }
     .mainNav{
         flex-direction: row;
         justify-content: center;
@@ -342,6 +347,7 @@ iframe{
         display:flex;
         flex-direction: column;
     }
+    
     .indexpic1{
         width: 80%;
         height: auto;
@@ -351,6 +357,13 @@ iframe{
         width: 80%;
         height: auto;
         margin: 2rem;
+    }
+    
+    .mobilText{
+        text-align: justify;
+    }
+    .obsImg{
+        width: 80%;
     }
     .footer_redes{
         flex-direction: row;;
