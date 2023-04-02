@@ -1,0 +1,384 @@
+/* externos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+/* ===========variables========== */
+
+.text_large{
+    font-family: 'Satisfy', cursive;
+    font-size: 8em;
+}
+
+.text_medium{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 2em;;
+}
+
+.text_intermediate{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 1.8em;
+}
+
+.text_small{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 1.4em;
+}
+/* ========== normalize ========== */
+
+/* * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+html{
+    font-size: 62.5%; 
+}
+
+.freyja_logo{
+    width: 5%; 
+    position: fixed;
+    margin-left: -3rem;
+}
+
+.navbar-expand-md .navbar-nav .nav-link{
+    padding-right: initial;
+}
+
+.bodySett{ 
+    background-color: rgb(243,233,241);
+}
+.navPages{
+    display: flex; 
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 6rem;
+    position: fixed;
+}
+
+.nav_links{
+    text-decoration: none;
+    color: rgb(72,98,115);
+    border-radius: 15px;
+    padding: 0.5rem;
+    ;
+}
+.nav_links:hover{
+    background-color: rgb(214,193,207);
+}
+
+.pagesHeader{
+    text-align: center;
+    color: rgb(164,120,149);
+    background-color: rgb(243,233,241);
+    width: 100%;
+}
+
+.footer_redes{
+    background-color: rgb(192,130,167);
+    display: flex;
+    flex-direction: column;
+    justify-content: start
+}
+.footer_redes a{
+    margin: 1rem 2rem;
+    
+}
+
+   /* 1st break point */
+
+   @media (max-width: 768px){
+    #homegrid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 10vh 41vh 140vh 7.3vh;
+        grid-template-areas: 
+        "nav nav"
+        "header header"
+        "main main"
+        "footer footer";
+    }
+    nav{
+        position: fixed;
+        padding: 3.7rem;
+    }
+    .header_img{
+        width: 100%;
+        height: 100%;
+    }
+    .mainNav{
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+        margin-top: -0.7rem;
+    }
+    .infoMain{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    .mainText1{
+        font-size: 1.4rem;
+    }
+    .mainText2{
+        font-size: 1.4rem;
+    }
+    .indexpic768{
+        width:80%
+    }
+    .footer_redes{
+        flex-direction: row;
+    }
+}
+
+@media(max-width:480px){
+    #homeGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "footer";
+    }
+    .mainNav{
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+        margin-top: -0.7rem;
+    }
+    .infoMain{
+        display:flex;
+        flex-direction: row;
+    }
+}
+
+/*===========  Home ===========*/
+
+nav{
+    background-color: rgb(192,130,167);
+    padding: 2rem 3rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-left: 2rem;
+    align-items: center;
+}
+
+nav ul li{
+    margin-right: 10px;
+}
+
+
+#homeGrid {
+    display: grid; 
+    grid-template-columns: 13vw 1fr 1fr; 
+    grid-template-rows: 0.5fr 1fr 1fr 0.06fr;  
+    grid-template-areas: 
+        "nav header header"
+        "nav main main"
+        "nav main main"
+        "footer footer footer"; 
+}
+
+#logo{
+    grid-area: header;
+}
+#buttons{
+    grid-area: nav;
+    display: flex;
+    align-items: start;
+    overflow: auto;
+}
+#center{
+    grid-area: main;
+}
+
+#foot{
+    grid-area: footer;
+}
+.header_img{
+    width: 100%;
+    height: 30rem;
+}
+.mainTitle{
+    position: relative;
+    top: -50%;
+    left: 30%;
+}
+.mainNav{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 6rem;
+    position: fixed;
+}
+.mainText1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 2rem 8rem;
+}
+
+.mainText2{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 2rem 8rem;
+}
+
+.infoMain{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+}
+.indexpic1{
+    height: 40vh;
+    grid-column:1/2;
+    grid-row: 2/3;
+    border-radius: 20px;
+    width: 80%;
+}
+.indexpic2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-radius: 20px;
+    width: 80%;
+}
+
+/*============ Estetica =============*/
+
+#aesGrid{
+    display: grid;
+    grid-template-columns: 0.30fr 1fr 1fr; 
+    grid-template-rows: 0.36fr 1fr 1fr 0.18fr;  
+    grid-template-areas:
+    "nav main main"
+    "nav main main"
+    "nav main main"
+    "footer footer footer"
+}
+.aesCarous{
+    grid-area: caro;
+}
+
+.aesSettings{
+    margin: 3rem;
+}
+
+/*============ Ginecolgica ============*/
+
+#ginGrid{
+    display: grid; 
+    grid-template-columns: 0.30fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 0.06fr;  
+    grid-template-areas: 
+        "nav main main"
+        "nav main main"
+        "nav main main"
+        "footer footer footer ";
+}
+.gynSettings{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gynInfo{
+    margin: 5%;
+}
+.gynService{
+    margin: 5%;
+}
+
+    /*============ Obstetricia ============*/
+
+.obsMain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.obsImg{
+    width: 50rem;
+    border-radius: 15px;
+    margin-left: 5%;
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+
+.obsIntro{
+    width: 50rem;
+    margin: 6%;
+    
+}
+
+/*=========== Contacto ==========*/
+
+.contactsettings{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+                                    
+}
+.contactHeading{
+    order: 1;
+    width: 100%;
+            
+}
+
+.contactLegend{
+    text-align: center;
+    margin: 15px 5px;
+    
+}
+
+.contactInfo{
+    order: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5rem;
+}
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: outset 2px rgb(164,120,149);
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}   
+.contactInput{
+    background-color: rgb(214,193,207);
+}
+.contactInput:hover {
+    background-color: rgb(164,120,149);
+}
+.contactForm input {
+    border-radius: 5px;
+}    
+.contactMap{
+    margin: 5px;
+}
+iframe{
+    width: 300px !important;
+    height: 300px !important;
+}
+.contactDetail{
+    order: 3;
+    text-align: center;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 15px;
+    background-color: rgb(243,233,241);
+}
